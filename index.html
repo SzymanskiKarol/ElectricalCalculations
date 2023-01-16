@@ -14,48 +14,49 @@
 
     </header>
     <main>
+        <h1>Fill 2 values to get other values:</h1>
         <div class="voltage-container">
             <label for="voltage">Voltage (V)</label>
             <input id="voltage" type="number">
             <select name="voltage-units" id="voltage-units">
-                <option value="mV">milliVolts (mV)</option>
-                <option value="V">Volts (V)</option>
-                <option value="kV">kiloVolts (kV)</option>
+                <option value="0.001">milliVolts (mV)</option>
+                <option value="1">Volts (V)</option>
+                <option value="1000">kiloVolts (kV)</option>
             </select>
         </div>
         <div class="current-container">
             <label for="current">Current (I)</label>
             <input id="current" type="number">
             <select name="current-units" id="current-units">
-                <option value="mA">milliAmpers (mA)</option>
-                <option value="A">Ampers (V)</option>
-                <option value="kA">kiloAmpers (kA)</option>
+                <option value="0.001">milliAmpers (mA)</option>
+                <option value="1">Ampers (V)</option>
+                <option value="1000">kiloAmpers (kA)</option>
             </select>
         </div>
         <div class="resistance-container">
             <label for="resistance">Resistance (R)</label>
             <input id="resistance" type="number">
             <select name="resistance-units" id="resistance-units">
-                <option value="Ohm">Ohms (Ω)</option>
-                <option value="kOhm">kiloOhms (kΩ)</option>
-                <option value="MOhm">megaOhms (MΩ)</option>
+                <option value="1">Ohms (Ω)</option>
+                <option value="1000">kiloOhms (kΩ)</option>
+                <option value="1000000">megaOhms (MΩ)</option>
             </select>
         </div>
         <div class="power-container">
             <label for="power">Power (P)</label>
             <input id="power" type="number">
             <select name="power-units" id="power-units">
-                <option value="W">Watts (W)</option>
-                <option value="kW">kiloWatts (kW)</option>
-                <option value="MW">megaWatts (MW)</option>
+                <option value="1">Watts (W)</option>
+                <option value="1000">kiloWatts (kW)</option>
+                <option value="1000000">megaWatts (MW)</option>
             </select>
         </div>
         <div class="buttons-container">
-            <button>Calculate</button>
-            <button>Reset</button>
+            <button id="calculate-btn">Calculate</button>
+            <button id="reset-btn">Reset</button>
         </div>
         <div class="result-container">
-            <span class="result">Here will be result</span>
+            <span id="result">Here will be result</span>
         </div>
 
     </main>
