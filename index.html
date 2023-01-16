@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Calculations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="voltage-container">
+            <label for="voltage">Voltage (V)</label>
+            <input id="voltage" type="number">
+            <select name="voltage-units" id="voltage-units">
+                <option value="mV">milliVolts (mV)</option>
+                <option value="V">Volts (V)</option>
+                <option value="kV">kiloVolts (kV)</option>
+            </select>
+        </div>
+        <div class="current-container">
+            <label for="current">Current (I)</label>
+            <input id="current" type="number">
+            <select name="current-units" id="current-units">
+                <option value="mA">milliAmpers (mA)</option>
+                <option value="A">Ampers (V)</option>
+                <option value="kA">kiloAmpers (kA)</option>
+            </select>
+        </div>
+        <div class="resistance-container">
+            <label for="resistance">Resistance (R)</label>
+            <input id="resistance" type="number">
+            <select name="resistance-units" id="resistance-units">
+                <option value="Ohm">Ohms (Ω)</option>
+                <option value="kOhm">kiloOhms (kΩ)</option>
+                <option value="MOhm">megaOhms (MΩ)</option>
+            </select>
+        </div>
+        <div class="power-container">
+            <label for="power">Power (P)</label>
+            <input id="power" type="number">
+            <select name="power-units" id="power-units">
+                <option value="W">Watts (W)</option>
+                <option value="kW">kiloWatts (kW)</option>
+                <option value="MW">megaWatts (MW)</option>
+            </select>
+        </div>
+        <div class="buttons-container">
+            <button>Calculate</button>
+            <button>Reset</button>
+        </div>
+        <div class="result-container">
+            <span class="result">Here will be result</span>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
