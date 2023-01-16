@@ -4,7 +4,20 @@
     box-sizing: border-box;
 }
 
+body {
+    background: rgb(194, 194, 223);
+}
+
 main {
+    display: flex;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+.left {
     display: flex;
     flex-direction: column;
     gap: 2rem;

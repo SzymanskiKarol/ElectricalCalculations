@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohm's Law</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="ohm.html">Ohm's Law</a>
+        <a href="form.html">Contact</a>
+    </header>
+    <main>
+        <div class="left">
+        <h1>Fill 2 values to get third:</h1>
+        <div class="voltage-container">
+            <label for="voltage">Voltage (V)</label>
+            <input id="voltage-input" type="number">
+            <select name="voltage-units" id="voltage-units">
+                <option value="0.001">milliVolts (mV)</option>
+                <option value="1" selected="selected">Volts (V)</option>
+                <option value="1000">kiloVolts (kV)</option>
+            </select>
+        </div>
+        <div class="current-container">
+            <label for="current">Current (I)</label>
+            <input id="current" type="number">
+            <select name="current-units" id="current-units">
+                <option value="0.001">milliAmpers (mA)</option>
+                <option value="1" selected="selected">Ampers (A)</option>
+                <option value="1000">kiloAmpers (kA)</option>
+            </select>
+        </div>
+        <div class="resistance-container">
+            <label for="resistance">Resistance (R)</label>
+            <input id="resistance" type="number">
+            <select name="resistance-units" id="resistance-units">
+                <option value="1" selected="selected">Ohms (Ω)</option>
+                <option value="1000">kiloOhms (kΩ)</option>
+                <option value="1000000">megaOhms (MΩ)</option>
+            </select>
+        </div>
+        <div class="buttons-container">
+            <button onclick="calculate()" id="calculate-btn">Calculate</button>
+            <button onclick="reset()" id="reset-btn">Reset</button>
+        </div>
+        <div class="result-container">
+            <label for="result">Result:</label>
+            <span id="result">...</span>
+        </div>
+    </div>
+    <div class="right">
+        <img src="images/circuit.png" alt="">
+        <img src="images/ohm-law-triangle.png" alt="">
+    </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="ohm.js"></script>
+</body>
+
+</html>
