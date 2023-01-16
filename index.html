@@ -11,13 +11,13 @@
 
 <body>
     <header>
-
+        <a href="form.html">Contact</a>
     </header>
     <main>
         <h1>Fill 2 values to get other values:</h1>
         <div class="voltage-container">
             <label for="voltage">Voltage (V)</label>
-            <input id="voltage" type="number">
+            <input id="voltage-input" type="number">
             <select name="voltage-units" id="voltage-units">
                 <option value="0.001">milliVolts (mV)</option>
                 <option value="1">Volts (V)</option>
@@ -29,7 +29,7 @@
             <input id="current" type="number">
             <select name="current-units" id="current-units">
                 <option value="0.001">milliAmpers (mA)</option>
-                <option value="1">Ampers (V)</option>
+                <option value="1">Ampers (A)</option>
                 <option value="1000">kiloAmpers (kA)</option>
             </select>
         </div>
@@ -52,7 +52,7 @@
             </select>
         </div>
         <div class="buttons-container">
-            <button id="calculate-btn">Calculate</button>
+            <button onclick="calculatePower()" id="calculate-btn">Calculate</button>
             <button id="reset-btn">Reset</button>
         </div>
         <div class="result-container">

@@ -1,22 +1,18 @@
 // Voltage Inputs
-const voltageInput = document.getElementById("voltage").value;
-const voltageUnits = document.getElementById("voltage-units").value;
-const voltage = voltageInput * voltageUnits;
+let voltageInput = document.getElementById("voltage-input");
+let voltageUnits = document.getElementById("voltage-units");
 
 // Current Inputs
-const currentInput = document.getElementById("current").value;
-const currentUnits = document.getElementById("current-units").value;
-const current = currentInput * currentUnits;
+let currentInput = document.getElementById("current");
+let currentUnits = document.getElementById("current-units");
 
 // Resistance Inputs
-const resistanceInput = document.getElementById("resistance").value;
-const resistanceUnits = document.getElementById("resistance-units").value;
-const resistance = resistanceInput * resistanceUnits;
+let resistanceInput = document.getElementById("resistance");
+let resistanceUnits = document.getElementById("resistance-units");
 
 // Power Inputs
-const powerInput = document.getElementById("power").value;
-const powerUnits = document.getElementById("power-units").value;
-const power = powerInput * powerUnits;
+let powerInput = document.getElementById("power");
+let powerUnits = document.getElementById("power-units");
 
 // Buttons
 const calculateButton = document.getElementById("calculate-btn");
@@ -26,6 +22,25 @@ const resetButton = document.getElementById("reset-btn");
 let result = document.getElementById("result");
 
 
-function calculate() {
-    
+function calculateResistance() {
+    let resistance = (parseFloat(voltageInput.value) / parseFloat(current.value)).toFixed(2);
+    if (resistance < 1000) {
+        result.innerHTML = resistance + "Ω";
+    } else if (resistance >= 1000 && resistance < 1000000) {
+        result.innerHTML = resistance + 'kΩ';
+    } else {
+        result.innerHTML = resistance + 'MΩ';
+    }
 }
+
+function calculatePower() {
+    let power = (parseFloat(voltageInput.value) * parseFloat(current.value)).toFixed(2);
+    if (power < 1000) {
+        result.innerHTML = power + "W";
+    } else if (power >= 1000 && power < 1000000) {
+        result.innerHTML = power + 'kW';
+    } else {
+        result.innerHTML = power + 'MW';
+    }
+}
+
